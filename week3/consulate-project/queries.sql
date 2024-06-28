@@ -1,5 +1,5 @@
 -- These are the queries that I used to create my consulate database project
-
+-- To the find result, check consulate relation model in consulate project file
 create table citizen (
 first_name varchar(255) not null,
 last_name varchar(255) not null,
@@ -66,16 +66,20 @@ primary key (id),
 foreign key(identity_card_id) references identity_card(id) on delete cascade
 );
 
+-- Here, I create a view table to see citizen who passed away from 2020 onwards
+
 create view registration_civil_status as
 select citizen_first_name, citizen_last_name, date_of_deceased
 from consular_registration cr 
 join civil_status cs on cs.consular_registration_id = cr.id
 where date_of_deceased > 01/01/2020;
 
-
+-- Here I place an index to speed up my search for registered citizen
 create index idx_registered
 on consular_registration(registered);
 
+-- This is a query to select registered citizen from consular_registeration table
 select * 
 from consular_registration cr 
 where registered = 'true';
+
