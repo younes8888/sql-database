@@ -54,7 +54,7 @@ This entity relationship diagram presents an overview of the designed tables and
 
 ## Entity Relationship Diagram
 
-![ Alt Text](consulate.jpg)
+![ Alt Text](consulate-er-diagram.jpg)
 ### Entities relationships
 
 Description of relationships:
