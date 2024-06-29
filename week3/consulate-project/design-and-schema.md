@@ -82,7 +82,7 @@ The citizen table is composed of the following:
 
 `last_name`: denotes the last name of the citizen. Its data type is set to `VARCHAR(255)`. This attribute has a `NOT NULL` constraint, and also belongs to a `COMPOISTE KEY`.
 
-`date_of_birth`: denotes the date when the citizen was born. Its date type is set to `DATE`. This attribute has a NOT NULL constraint, and also belongs to a `COMPOISTE KEY`.
+`date_of_birth`: denotes the date when the citizen was born. Its date type is set to `DATE`. This attribute has a `NOT NULL` constraint, and also belongs to a `COMPOISTE KEY`.
 
 This column has a `COMPOSITE PRIMARY KEY` that includes `first_name`, `last_name` and `date_of_ birth` to uniquely identify a specific citizen. Having only `first_name` and `last_name`; without a `date_of_birth` as a `COMPOSITE KEY` may result in more than one citizen.
 
